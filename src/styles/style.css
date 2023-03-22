@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #bbb;
+}
+
+.container {
+  background: #efe;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+}
+
+.container > div {
+  border: 2px solid red;
+}
