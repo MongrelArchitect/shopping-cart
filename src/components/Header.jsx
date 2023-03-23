@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Cart from './Cart';
-
 export default function Header() {
   return (
     <div className="header">
@@ -14,8 +12,10 @@ export default function Header() {
         <li>
           <Link to="/shop">Shop</Link>
         </li>
+        <li>
+          <Link to="/cart">Cart</Link>
+        </li>
       </ul>
-      <Cart />
     </div>
   );
 }
