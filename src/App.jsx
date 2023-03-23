@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/Header';
 import RouteSwitch from './components/Router';
@@ -8,10 +8,18 @@ import './styles/reset.css';
 import './styles/style.css';
 
 function App() {
+  const [cart, setCart] = useState({});
+
+  const addToCart = (id, quantity) => {
+    const newCart = { ...cart };
+    newCart[id] = quantity;
+    setCart(newCart);
+  };
+
   return (
     <div className="container">
-      <Header />
-      <RouteSwitch />
+      <Header cart={cart} />
+      <RouteSwitch addToCart={addToCart} />
       <Footer />
     </div>
   );

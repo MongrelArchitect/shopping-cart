@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Product from './Product';
 
-export default function Shop() {
+export default function Shop({ addToCart }) {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Shop() {
     return (
       <div className="products">
         {products.map((product) => (
-          <Product product={product} key={product.id} />
+          <Product product={product} key={product.id} addToCart={addToCart} />
         ))}
       </div>
     );
