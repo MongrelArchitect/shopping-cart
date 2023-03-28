@@ -15,25 +15,45 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 64px 1fr 100px;
+  grid-template-rows: 64px 1fr 80px;
   margin: auto;
   max-width: 1000px;
   min-height: 100vh;
 }
 
-.header {
+.footer {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer a {
+  font-weight: bold;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header,
+.footer {
   align-items: center;
   background: #413543;
   color: #f0eb8d;
   display: flex;
-  font-size: 1.2rem;
-  justify-content: space-between;
   padding: 8px;
+}
+
+.header {
+  font-size: 1.2rem;
   position: sticky;
+  justify-content: space-between;
   top: 0;
 }
 
-.header a {
+.header a,
+.footer a {
   color: #ebe8ac;
   text-decoration: none;
 }
