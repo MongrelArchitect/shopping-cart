@@ -4,7 +4,12 @@ import Home from './Home';
 import Shop from './Shop';
 import Cart from './Cart';
 
-export default function RouteSwitch({ products, setProducts, addToCart }) {
+export default function RouteSwitch({
+  products,
+  setProducts,
+  cart,
+  addToCart,
+}) {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -18,7 +23,7 @@ export default function RouteSwitch({ products, setProducts, addToCart }) {
           />
         )}
       />
-      <Route path="/cart" element={<Cart />} />
+      <Route path="/cart" element={<Cart products={products} cart={cart} />} />
     </Routes>
   );
 }

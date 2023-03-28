@@ -25,6 +25,7 @@ function App() {
     <div className="container">
       <Header cart={cart} />
       <RouteSwitch
+        cart={cart}
         addToCart={addToCart}
         products={products}
         setProducts={setProducts}

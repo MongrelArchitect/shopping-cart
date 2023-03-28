@@ -6,6 +6,10 @@ body {
   background: #bbb;
 }
 
+.cart-product-image {
+  width: 64px;
+}
+
 .container {
   background: #efe;
   display: grid;
