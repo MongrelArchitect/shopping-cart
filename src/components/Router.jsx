@@ -9,6 +9,7 @@ export default function RouteSwitch({
   setProducts,
   cart,
   addToCart,
+  removeFromCart,
 }) {
   return (
     <Routes>
@@ -23,7 +24,16 @@ export default function RouteSwitch({
           />
         )}
       />
-      <Route path="/cart" element={<Cart products={products} cart={cart} />} />
+      <Route
+        path="/cart"
+        element={(
+          <Cart
+            products={products}
+            cart={cart}
+            removeFromCart={removeFromCart}
+          />
+        )}
+      />
     </Routes>
   );
 }

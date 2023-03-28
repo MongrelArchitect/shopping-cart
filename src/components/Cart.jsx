@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Cart({ cart, products }) {
+export default function Cart({ cart, products, removeFromCart }) {
   const getTotalPrice = () => {
     const keys = Object.keys(cart);
     let total = 0;
@@ -8,6 +8,10 @@ export default function Cart({ cart, products }) {
       total += products[key - 1].price * cart[key];
     });
     return Math.round((total + Number.EPSILON) * 100) / 100;
+  };
+
+  const handleRemove = (event) => {
+    removeFromCart(event.target.dataset.key);
   };
 
   const cartKeys = Object.keys(cart);
@@ -38,7 +42,9 @@ export default function Cart({ cart, products }) {
               {cart[key]}
               : $
               {products[id].price * cart[key]}
-              <button type="button">REMOVE</button>
+              <button data-key={key} type="button" onClick={handleRemove}>
+                REMOVE
+              </button>
             </li>
           );
         })}

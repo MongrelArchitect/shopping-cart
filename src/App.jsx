@@ -21,6 +21,12 @@ function App() {
     setCart(newCart);
   };
 
+  const removeFromCart = (id) => {
+    const newCart = { ...cart };
+    delete newCart[id];
+    setCart(newCart);
+  };
+
   return (
     <div className="container">
       <Header cart={cart} />
@@ -29,6 +35,7 @@ function App() {
         addToCart={addToCart}
         products={products}
         setProducts={setProducts}
+        removeFromCart={removeFromCart}
       />
       <Footer />
     </div>
