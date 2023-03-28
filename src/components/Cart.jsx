@@ -18,14 +18,14 @@ export default function Cart({ cart, products, removeFromCart }) {
 
   if (!cartKeys.length) {
     return (
-      <div>
+      <div className="cart">
         <h3>Cart is empty. Get shopping!</h3>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="cart">
       <ul>
         {cartKeys.map((key) => {
           const id = key - 1;

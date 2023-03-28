@@ -23,7 +23,7 @@ export default function Shop({ products, setProducts, addToCart }) {
   }
 
   return (
-    <div>
+    <div className="products">
       <span>Loading...</span>
     </div>
   );

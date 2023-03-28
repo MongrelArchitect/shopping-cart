@@ -54,6 +54,45 @@ body {
   gap: 8px;
 }
 
+.hero {
+  align-items: center;
+  color: #f0eb8d;
+  display: flex;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+
+.hero h2 {
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 2.4rem;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.home,
+.products,
+.cart {
+  background: #8f43ee;
+}
+
+.home-info {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+
+.home-info p {
+  color: #f0eb8d;
+  font-size: 1.6rem;
+  max-width: 600px;
+  text-shadow: 0 0 6px #2d2727;
+}
+
 .product {
   border: 2px solid cyan;
   display: flex;
