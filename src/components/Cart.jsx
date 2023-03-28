@@ -30,7 +30,7 @@ export default function Cart({ cart, products, removeFromCart }) {
         {cartKeys.map((key) => {
           const id = key - 1;
           return (
-            <li>
+            <li key={key}>
               <img
                 src={products[id].image}
                 alt=""
@@ -51,6 +51,7 @@ export default function Cart({ cart, products, removeFromCart }) {
       </ul>
       Total: $
       {getTotalPrice()}
+      <button type="button">CHECKOUT</button>
     </div>
   );
 }

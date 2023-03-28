@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header({ cart }) {
   const getTotalItemCount = () => {
@@ -11,18 +11,26 @@ export default function Header({ cart }) {
     return total;
   };
 
+  const { pathname } = useLocation();
+
   return (
     <div className="header">
-      <span>FakeShop</span>
+      <h1>FakeShop</h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className={pathname === '/' ? 'active' : null}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop" className={pathname === '/shop' ? 'active' : null}>
+            Shop
+          </Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart" className={pathname === '/cart' ? 'active' : null}>
+            Cart
+          </Link>
           <span>
             {' '}
             (
