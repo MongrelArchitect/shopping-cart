@@ -9,17 +9,26 @@ import './styles/style.css';
 
 function App() {
   const [cart, setCart] = useState({});
+  const [products, setProducts] = useState(null);
 
   const addToCart = (id, quantity) => {
     const newCart = { ...cart };
-    newCart[id] = quantity;
+    if (newCart[id]) {
+      newCart[id] += quantity;
+    } else {
+      newCart[id] = quantity;
+    }
     setCart(newCart);
   };
 
   return (
     <div className="container">
       <Header cart={cart} />
-      <RouteSwitch addToCart={addToCart} />
+      <RouteSwitch
+        addToCart={addToCart}
+        products={products}
+        setProducts={setProducts}
+      />
       <Footer />
     </div>
   );

@@ -27,6 +27,9 @@ export default function Header({ cart }) {
             {' '}
             (
             {getTotalItemCount()}
+            {' '}
+            item
+            {getTotalItemCount() === 1 ? null : 's'}
             )
           </span>
         </li>

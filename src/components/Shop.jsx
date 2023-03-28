@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Product from './Product';
 
-export default function Shop({ addToCart }) {
-  const [products, setProducts] = useState(null);
-
+export default function Shop({ products, setProducts, addToCart }) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('https://fakestoreapi.com/products');

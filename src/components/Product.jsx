@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 export default function Product({ product, addToCart }) {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const changeQuantity = (event) => {
     setQuantity(+event.target.value);
-    console.log(quantity);
   };
 
   const addItem = () => {
@@ -28,6 +27,7 @@ export default function Product({ product, addToCart }) {
           min="1"
           id={`quant${product.id}`}
           onChange={changeQuantity}
+          value={quantity !== 0 ? quantity : 1}
         />
       </label>
       <button type="button" onClick={addItem}>ADD TO CART</button>
