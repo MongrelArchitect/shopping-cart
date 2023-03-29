@@ -22,10 +22,7 @@ export default function Footer() {
           <a target="_blank" href="https://fakestoreapi.com/" rel="noreferrer">
             Fake Store API
           </a>
-          .
-        </li>
-        <li>
-          Home image from
+          , image from
           {' '}
           <a
             target="_blank"
