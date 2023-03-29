@@ -36,22 +36,34 @@ export default function Cart({ cart, products, removeFromCart }) {
                 alt=""
                 className="cart-product-image"
               />
-              $
-              {products[id].price}
-              {' x '}
-              {cart[key]}
-              : $
-              {products[id].price * cart[key]}
-              <button data-key={key} type="button" onClick={handleRemove}>
-                REMOVE
-              </button>
+              <span>
+                $
+                {products[id].price}
+                {' x '}
+                {cart[key]}
+                : $
+                {products[id].price * cart[key]}
+                <button
+                  className="remove"
+                  data-key={key}
+                  type="button"
+                  onClick={handleRemove}
+                >
+                  ✕
+                </button>
+              </span>
             </li>
           );
         })}
+        <li>
+          <span />
+          <span className="cart-total">
+            Total: $
+            {getTotalPrice()}
+            <button type="button">CHECKOUT</button>
+          </span>
+        </li>
       </ul>
-      Total: $
-      {getTotalPrice()}
-      <button type="button">CHECKOUT</button>
     </div>
   );
 }
