@@ -13,10 +13,10 @@ export default function Product({ product, addToCart }) {
 
   return (
     <div className="product">
-      <span>{product.title}</span>
+      <span className="product-title">{product.title}</span>
       <img src={product.image} alt="" />
       <span>{product.description}</span>
-      <span>
+      <span className="product-price">
         $
         {product.price}
       </span>
