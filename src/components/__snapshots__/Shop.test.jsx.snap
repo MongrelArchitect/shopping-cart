@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop component renders correctly with some products 1`] = `
+<div>
+  <div
+    class="products"
+  >
+    <div
+      class="product"
+    >
+      <span
+        class="product-title"
+      >
+        Fake Product #1
+      </span>
+      <img
+        alt=""
+        src="#"
+      />
+      <span>
+        A fantastic fake product that does nothing
+      </span>
+      <span
+        class="product-price"
+      >
+        $
+        200
+      </span>
+      <label
+        for="quant1"
+      >
+        Quantity:
+        <input
+          id="quant1"
+          min="1"
+          type="number"
+        />
+      </label>
+      <button
+        type="button"
+      >
+        ADD TO CART
+      </button>
+    </div>
+    <div
+      class="product"
+    >
+      <span
+        class="product-title"
+      >
+        Fake Product #2
+      </span>
+      <img
+        alt=""
+        src="#"
+      />
+      <span>
+        Another phony placeholder
+      </span>
+      <span
+        class="product-price"
+      >
+        $
+        25
+      </span>
+      <label
+        for="quant2"
+      >
+        Quantity:
+        <input
+          id="quant2"
+          min="1"
+          type="number"
+        />
+      </label>
+      <button
+        type="button"
+      >
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Shop component renders correctly with zero products 1`] = `
+<div>
+  <div
+    class="cart"
+  >
+    <h3>
+      Loading...
+    </h3>
+  </div>
+</div>
+`;
