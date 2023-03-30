@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <div
+      class="hero"
+      style="background-image: url(shop-hero.jpg);"
+    >
+      <h2>
+        Welcome to FakeShop!
+      </h2>
+    </div>
+    <div
+      class="home-info"
+    >
+      <p>
+        We've got all the phony products you need, right here. Check our shop for the latest in false and faux merchandise. Need something made up for the next holiday? How about a make believe product for that special nobody? Look no further!
+      </p>
+    </div>
+  </div>
+</div>
+`;

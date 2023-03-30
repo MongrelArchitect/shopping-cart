@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import Header from './Header';
 
 describe('Header component', () => {
-  test('Renders correctly with zero cart items', () => {
+  it('Renders correctly with zero cart items', () => {
     const { container } = render(
       <BrowserRouter>
         <Header cart={{}} />
@@ -13,7 +13,7 @@ describe('Header component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('Shows correct number of items in cart', () => {
+  it('Shows correct number of items in cart', () => {
     const fakeCart = {
       1: 7,
       2: 1,
@@ -30,7 +30,7 @@ describe('Header component', () => {
     expect(cartItems.textContent).toMatch('(11 items)');
   });
 
-  test('Style links according to router path', () => {
+  it('Style links according to router path', () => {
     render(
       <MemoryRouter initialEntries={['/shop']}>
         <Header cart={{}} />
