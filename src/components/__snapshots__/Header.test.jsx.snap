@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Renders correctly with zero cart items 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <h1>
+      FakeShop
+    </h1>
+    <ul>
+      <li>
+        <a
+          class="active"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          href="/cart"
+        >
+          Cart
+        </a>
+        <span>
+           
+          (
+          0
+           
+          item
+          s
+          )
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
