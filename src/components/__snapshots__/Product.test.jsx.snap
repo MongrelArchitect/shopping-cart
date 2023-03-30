@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product component renders correctly 1`] = `
+<div>
+  <div
+    class="product"
+  >
+    <span
+      class="product-title"
+    >
+      Some Fake Product
+    </span>
+    <img
+      alt=""
+      src="#"
+    />
+    <span>
+      A good ol fashioned phony placeholder product
+    </span>
+    <span
+      class="product-price"
+    >
+      $
+      150
+    </span>
+    <label
+      for="quant22"
+    >
+      Quantity:
+      <input
+        id="quant22"
+        min="1"
+        placeholder="1"
+        type="number"
+      />
+    </label>
+    <button
+      type="button"
+    >
+      ADD TO CART
+    </button>
+    <span
+      class="quantity-error"
+      style="visibility: hidden;"
+    >
+      Invalid: No decimals or negatives
+    </span>
+  </div>
+</div>
+`;
