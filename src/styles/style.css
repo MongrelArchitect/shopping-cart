@@ -187,6 +187,13 @@ body {
   align-self: center;
 }
 
+.product button:disabled {
+  color: #413543;
+  background: #f89544;
+  content: "aslkjd";
+  text-decoration-line: line-through;
+}
+
 .cart button.remove {
   color: #413543;
   background: #f89544;
@@ -227,4 +234,14 @@ body {
   gap: 8px;
   justify-content: center;
   padding: 8px;
+}
+
+.quantity-error {
+  background: #f89544;
+  border: 2px solid #2d2727;
+  color: #111;
+  font-size: 1.1rem;
+  padding: 4px;
+  text-align: center;
+  width: 100%;
 }

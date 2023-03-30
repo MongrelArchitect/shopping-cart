@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 
 export default function Product({ product, addToCart }) {
   const [quantity, setQuantity] = useState(1);
+  const [invalidQuantity, setInvalidQuantity] = useState(false);
 
   const changeQuantity = (event) => {
-    setQuantity(+event.target.value);
+    const { value } = event.target;
+    if (!value.includes('.') && +value >= 1) {
+      setQuantity(+value);
+      setInvalidQuantity(false);
+    } else {
+      setInvalidQuantity(true);
+    }
   };
 
   const addItem = () => {
@@ -27,10 +34,18 @@ export default function Product({ product, addToCart }) {
           min="1"
           id={`quant${product.id}`}
           onChange={changeQuantity}
-          value={quantity !== 0 ? quantity : 1}
+          placeholder={quantity}
         />
       </label>
-      <button type="button" onClick={addItem}>ADD TO CART</button>
+      <button disabled={invalidQuantity} type="button" onClick={addItem}>
+        ADD TO CART
+      </button>
+      <span
+        className="quantity-error"
+        style={{ visibility: invalidQuantity ? 'visible' : 'hidden' }}
+      >
+        Invalid: No decimals or negatives
+      </span>
     </div>
   );
 }
