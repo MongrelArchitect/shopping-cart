@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import RouteSwitch from './components/Router';
@@ -10,6 +10,16 @@ import './styles/style.css';
 function App() {
   const [cart, setCart] = useState({});
   const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('https://fakestoreapi.com/products');
+      const result = await response.json();
+      setProducts(result);
+    };
+
+    fetchData();
+  }, []);
 
   const addToCart = (id, quantity) => {
     const newCart = { ...cart };
