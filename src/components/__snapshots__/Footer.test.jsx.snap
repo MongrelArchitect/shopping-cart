@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders correctly 1`] = `
+<div>
+  <div
+    class="footer"
+  >
+    <ul>
+      <li>
+        Designed by
+         
+        <a
+          href="http://www.seanericthomas.com"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Sean Eric Thomas
+        </a>
+        .
+      </li>
+      <li>
+        Products from
+         
+        <a
+          href="https://fakestoreapi.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Fake Store API
+        </a>
+        , image from
+         
+        <a
+          href="https://unsplash.com/photos/c9FQyqIECds"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Unsplash
+        </a>
+        .
+      </li>
+    </ul>
+  </div>
+</div>
+`;
