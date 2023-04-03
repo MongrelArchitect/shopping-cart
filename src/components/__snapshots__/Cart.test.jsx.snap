@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component renders correctly with some items in cart 1`] = `
+<div>
+  <div
+    class="cart"
+  >
+    <ul>
+      <li>
+        <img
+          alt=""
+          class="cart-product-image"
+          src="1"
+        />
+        <span>
+          $
+          100
+           x 
+          7
+          : $
+          700
+          <button
+            class="remove"
+            data-key="1"
+            type="button"
+          >
+            ✕
+          </button>
+        </span>
+      </li>
+      <li>
+        <img
+          alt=""
+          class="cart-product-image"
+          src="3"
+        />
+        <span>
+          $
+          250
+           x 
+          2
+          : $
+          500
+          <button
+            class="remove"
+            data-key="3"
+            type="button"
+          >
+            ✕
+          </button>
+        </span>
+      </li>
+      <li>
+        <img
+          alt=""
+          class="cart-product-image"
+          src="4"
+        />
+        <span>
+          $
+          1000
+           x 
+          3
+          : $
+          3000
+          <button
+            class="remove"
+            data-key="4"
+            type="button"
+          >
+            ✕
+          </button>
+        </span>
+      </li>
+      <li>
+        <span />
+        <span
+          class="cart-total"
+        >
+          Total: $
+          4200
+          <button
+            type="button"
+          >
+            CHECKOUT
+          </button>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Cart component renders correctly with zero items in cart 1`] = `
+<div>
+  <div
+    class="cart"
+  >
+    <h3>
+      Cart is empty. Get shopping!
+    </h3>
+  </div>
+</div>
+`;
